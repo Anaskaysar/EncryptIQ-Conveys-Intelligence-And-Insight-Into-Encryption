@@ -29,18 +29,14 @@ const Header = () => (
             <a>Algorithms</a>
           </li>
           <li>
-            <a>Parent</a>
             <ul className="p-2">
-              <li>
-                <a>Submenu 1</a>
+            <li>
+              <Link to="/aes">AES</Link>
               </li>
               <li>
-                <a>Submenu 2</a>
+              <Link to="/rsa">RSA</Link>
               </li>
             </ul>
-          </li>
-          <li>
-            <a>Item 3</a>
           </li>
         </ul>
       </div>
@@ -64,10 +60,10 @@ const Header = () => (
             <summary>Algorithms</summary>
             <ul className="p-2 bg-neutral text-neutral-content">
               <li>
-                <a>AES</a>
+              <Link to="/aes">AES</Link>
               </li>
               <li>
-                <a>RSA</a>
+              <Link to="/rsa">RSA</Link>
               </li>
             </ul>
           </details>
