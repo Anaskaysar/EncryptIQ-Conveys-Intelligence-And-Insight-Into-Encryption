@@ -1,10 +1,14 @@
-import React from 'react';
+// LearnMore.jsx
+import React from "react";
+import AlgorithmOverview from "../components/AlgorithmOverview";
+import MetricComparisonTable from "../components/MetricComparisonTable";
+import SecurityFeature from "../components/SecurityFeature";
 
 const LearnMore = () => (
-  <div className="p-4">
-    <h2 className="text-2xl">Learn More About AES and RSA</h2>
-    <p className="my-4">AES (Advanced Encryption Standard) and RSA (Rivest–Shamir–Adleman) are two different encryption techniques...</p>
-    {/* Add more content here */}
+  <div className="container mx-auto px-4 py-12 bg-gradient-to-b from-blue-50 to-indigo-100 min-h-screen">
+    <AlgorithmOverview />
+    <MetricComparisonTable />
+    <SecurityFeature />
   </div>
 );
 
