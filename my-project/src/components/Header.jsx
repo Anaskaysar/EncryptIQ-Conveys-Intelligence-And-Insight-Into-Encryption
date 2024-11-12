@@ -1,64 +1,65 @@
-import React from 'react';
+// Header.jsx
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-const Header = () => (
-    <div className="navbar bg-neutral text-neutral-content">
-    <div className="navbar-start">
-      <div className="dropdown">
-        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h8m-8 6h16" />
-          </svg>
-        </div>
-        <ul
-          tabIndex={0}
-          className="menu menu-sm dropdown-content bg-neutral text-neutral-content rounded-box z-[1] mt-3 w-52 p-2 shadow">
-          <li><a>Algorithms</a></li>
-          <li>
-            <a>Parent</a>
-            <ul className="p-2">
-              <li><a>Submenu 1</a></li>
-              <li><a>Submenu 2</a></li>
-            </ul>
-          </li>
-          <li><a>Item 3</a></li>
-        </ul>
+const Header = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleDropdownToggle = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const handleClickOutside = (event) => {
+    if (!event.target.closest('.dropdown')) {
+      setIsDropdownOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isDropdownOpen) {
+      document.addEventListener('click', handleClickOutside);
+    } else {
+      document.removeEventListener('click', handleClickOutside);
+    }
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, [isDropdownOpen]);
+
+  return (
+    <header className="bg-gradient-to-r from-blue-50 to-green-50 p-4 shadow-md text-gray-800 fixed w-full top-0 z-50">
+      <div className="container mx-auto flex items-center justify-between">
+        
+        {/* Logo aligned to the left */}
+        <h1 className="text-2xl font-bold flex-shrink-0">
+          <span className="text-blue-400">Elcrypt</span>
+          <span className="text-green-400">IQ</span>
+        </h1>
+        
+        {/* Centered navigation links */}
+        <nav className="flex space-x-4 mx-auto">
+          <Link to="/" className="hover:text-blue-600 transition-colors">Home</Link>
+          <Link to="/learn-more" className="hover:text-blue-600 transition-colors">Learn More</Link>
+          <div className="relative dropdown">
+            <button onClick={handleDropdownToggle} className="hover:text-blue-600 transition-colors focus:outline-none">
+              More
+            </button>
+            {isDropdownOpen && (
+              <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 text-gray-700 transition-opacity duration-300 ease-out">
+                <Link to="/option1" className="block px-4 py-2 hover:bg-blue-100">Option 1</Link>
+                <Link to="/option2" className="block px-4 py-2 hover:bg-blue-100">Option 2</Link>
+                <Link to="/option3" className="block px-4 py-2 hover:bg-blue-100">Option 3</Link>
+              </div>
+            )}
+          </div>
+        </nav>
+        
+        {/* Team link aligned to the right */}
+        <Link to="/team" className="hover:text-blue-600 transition-colors ml-auto">
+          Team
+        </Link>
       </div>
-      <a className="btn btn-ghost text-xl">
-      <div className="text-2xl font-bold">
-      <span className="text-blue-400">Elcrypt</span><span className="text-green-400">IQ</span>
-    </div>
-
-      </a>
-    </div>
-    <div className="navbar-center hidden lg:flex">
-      <ul className="menu menu-horizontal px-1">
-        <li><a>Home</a></li>
-        <li>
-          <details>
-            <summary>Algorithms</summary>
-            <ul className="p-2 bg-neutral text-neutral-content">
-              <li><a>AES</a></li>
-              <li><a>RSA</a></li>
-            </ul>
-          </details>
-        </li>
-        <li><a>Learn More</a></li>
-      </ul>
-    </div>
-    <div className="navbar-end">
-      <a className="btn">Team</a>
-    </div>
-  </div>
-
-);
+    </header>
+  );
+};
 
 export default Header;
+
