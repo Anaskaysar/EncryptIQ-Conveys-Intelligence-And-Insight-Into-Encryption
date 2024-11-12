@@ -50,7 +50,7 @@ Ensure you have the following installed:
    Clone this repository to your local machine using the following command:
 
    ```bash
-   git clone https://github.com/yourusername/ElcryptIQ.git
+   git clone https://github.com/Anaskaysar/EncryptIQ-Conveys-Intelligence-And-Insight-Into-Encryption
    ```
 
 2. **Navigate into the Project Directory**
@@ -75,7 +75,7 @@ After installing dependencies, you can run the project locally using:
 npm run dev
 ```
 
-This will start the development server, and you can access the project at `http://localhost:3000` by default.
+This will start the development server, and you can access the project at `http://localhost:5173` or `http://localhost:3000` by default.
 
 ## Folder Structure
 
