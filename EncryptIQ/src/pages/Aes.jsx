@@ -1,10 +1,11 @@
 import React from 'react';
+import EncryptionPage from '../components/EncryptionPage';
 
 const Aes = () => {
     return (
-        <div className='text-9xl'>
-            <h1>This is AES page</h1>
-        </div>
+        <>
+        <EncryptionPage title="AES" />
+        </>
     );
 };
 
