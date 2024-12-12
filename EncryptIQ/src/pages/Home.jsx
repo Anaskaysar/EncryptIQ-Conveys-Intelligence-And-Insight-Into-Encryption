@@ -1,7 +1,7 @@
-// Home.jsx
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import ContentCard from '../components/ContentCard';
+
 
 const Home = () => {
   const navigate = useNavigate();

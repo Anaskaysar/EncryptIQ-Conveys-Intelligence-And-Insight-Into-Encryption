@@ -1,4 +1,3 @@
-// LearnMore.jsx
 import React from "react";
 import AlgorithmOverview from "../components/AlgorithmOverview";
 import MetricComparisonTable from "../components/MetricComparisonTable";

@@ -37,7 +37,7 @@ const Footer = () => (
       {/* Right Section - Social Icons */}
       <div className="flex items-center space-x-4">
         <a
-          href="https://github.com"
+          href="https://github.com/Anaskaysar/EncryptIQ-Conveys-Intelligence-And-Insight-Into-Encryption"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-500 hover:text-blue-600 transition-colors"
@@ -52,7 +52,7 @@ const Footer = () => (
           </svg>
         </a>
         <a
-          href="https://twitter.com"
+          href="#"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-500 hover:text-blue-400 transition-colors"
@@ -67,7 +67,7 @@ const Footer = () => (
           </svg>
         </a>
         <a
-          href="https://linkedin.com"
+          href="#"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-500 hover:text-blue-700 transition-colors"
