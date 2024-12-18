@@ -13,7 +13,7 @@
       "name": "Md. Hasibul Hasan",
       "studentId": "0434009",
       "role": "Master's Student, Computational Science",
-      "bio": "",
+      "bio": "Data Analyst | Software Engineer(ERP)",
       "image": "/images/Hasibul.jpeg",
       "linkedin": "https://www.linkedin.com/in/cs-hasibul/",
       "github": "https://github.com/cs-hasibul",
@@ -40,13 +40,13 @@
       "personalSite": "https://member2.com"
     },
     {
-      "name": "Member 5",
-      "studentId": "ID: 1002",
+      "name": "Sumona Akter Dalia",
+      "studentId": "ID: 0444836",
       "role": "Master's Student, Computational Science",
-      "bio": "Focused on machine learning and algorithm optimization.",
-      "image": "path/to/member2.jpg",
-      "linkedin": "https://www.linkedin.com/in/member2",
-      "github": "https://github.com/member2",
+      "bio": "Data Science and ML Enthusiast.",
+      "image": "/images/dalia.png",
+      "linkedin": "https://www.linkedin.com/in/sumona-akter-dalia-b2b12033b/",
+      "github": "https://github.com/daliasumona",
       "personalSite": "https://member2.com"
     }
 
