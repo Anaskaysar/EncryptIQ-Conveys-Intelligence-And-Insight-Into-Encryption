@@ -1,4 +1,3 @@
-import React from "react";
 import AlgorithmOverview from "../components/AlgorithmOverview";
 import MetricComparisonTable from "../components/MetricComparisonTable";
 import SecurityFeature from "../components/SecurityFeature";

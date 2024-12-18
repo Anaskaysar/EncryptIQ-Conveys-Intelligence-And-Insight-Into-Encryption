@@ -11,16 +11,16 @@
     },
     {
       "name": "Md. Hasibul Hasan",
-      "studentId": "",
+      "studentId": "0434009",
       "role": "Master's Student, Computational Science",
       "bio": "",
-      "image": "path/to/member2.jpg",
+      "image": "/images/Hasibul.jpeg",
       "linkedin": "https://www.linkedin.com/in/cs-hasibul/",
       "github": "https://github.com/cs-hasibul",
       "personalSite": "https://member2.com"
     },
     {
-      "name": "Member 3",
+      "name": "Mahadee Zaman",
       "studentId": "ID: 1002",
       "role": "Master's Student, Computational Science",
       "bio": "Focused on machine learning and algorithm optimization.",

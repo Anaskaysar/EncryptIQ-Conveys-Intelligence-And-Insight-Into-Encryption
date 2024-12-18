@@ -1,5 +1,4 @@
 // MetricComparisonTable.jsx
-import React from 'react';
 import SectionHeader from './SectionHeader';
 
 const MetricComparisonTable = () => (

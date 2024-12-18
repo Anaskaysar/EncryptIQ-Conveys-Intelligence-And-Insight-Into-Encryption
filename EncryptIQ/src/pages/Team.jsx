@@ -1,5 +1,4 @@
 // Team.jsx
-import React from "react";
 import TeamMemberCard from "../components/TeamMemberCard";
 import teamMembersData from "../assets/teamMembers.json";
 

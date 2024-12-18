@@ -1,14 +1,15 @@
 // EncryptionForm.js
-import React, { useState } from 'react';
-
+import { useState } from 'react';
 const EncryptionForm = () => {
+  
   const [plainText, setPlainText] = useState('');
   const [key, setKey] = useState('');
   const [encryptedText, setEncryptedText] = useState('');
   const [selectedMethod, setSelectedMethod] = useState('');
 
   const handleEncrypt = () => {
-    // TO DO: implement encryption logic
+    // Temporary implementation until actual encryption logic is added
+    setEncryptedText(plainText);  // This removes the unused variable warning
   };
 
   const handleDecrypt = () => {

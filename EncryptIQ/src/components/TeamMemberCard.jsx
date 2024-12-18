@@ -1,5 +1,6 @@
 // TeamMemberCard.jsx
-import React from 'react';
+
+import PropTypes from 'prop-types';
 import { FaLinkedin, FaGithub, FaGlobe } from 'react-icons/fa';
 
 const TeamMemberCard = ({ name, studentId, role, bio, image, linkedin, github, personalSite }) => (
@@ -38,5 +39,16 @@ const TeamMemberCard = ({ name, studentId, role, bio, image, linkedin, github, p
     </div>
   </div>
 );
+
+TeamMemberCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  studentId: PropTypes.string.isRequired,
+  role: PropTypes.string.isRequired,
+  bio: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  linkedin: PropTypes.string,
+  github: PropTypes.string,
+  personalSite: PropTypes.string
+};
 
 export default TeamMemberCard;

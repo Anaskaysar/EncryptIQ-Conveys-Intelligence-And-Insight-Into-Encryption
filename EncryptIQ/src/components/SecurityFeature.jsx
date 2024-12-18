@@ -1,5 +1,4 @@
 // SecurityFeature.jsx
-import React from 'react';
 import SectionHeader from './SectionHeader';
 import ContentCard from './ContentCard';
 import { FaShieldAlt } from 'react-icons/fa';
