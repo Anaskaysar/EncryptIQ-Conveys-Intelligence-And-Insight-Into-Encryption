@@ -1,32 +1,77 @@
-// MetricComparisonTable.jsx
-import SectionHeader from './SectionHeader';
+import { Bar } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+import SectionHeader from "./SectionHeader";
 
-const MetricComparisonTable = () => (
-  <div className="mt-8">
-    <SectionHeader title="Performance Metrics" />
-    <table className="min-w-full bg-white rounded-lg shadow-md">
-      <thead className="bg-gradient-to-r from-blue-500 to-green-500 text-white">
-        <tr>
-          <th className="px-4 py-3">Metric</th>
-          <th className="px-4 py-3">AES</th>
-          <th className="px-4 py-3">RSA</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr className="bg-blue-50 hover:bg-blue-100 transition duration-300">
-          <td className="border px-4 py-2">Encryption Time</td>
-          <td className="border px-4 py-2">Fast</td>
-          <td className="border px-4 py-2">Slower</td>
-        </tr>
-        <tr className="bg-white hover:bg-blue-100 transition duration-300">
-          <td className="border px-4 py-2">Key Size Options</td>
-          <td className="border px-4 py-2">128, 192, 256 bits</td>
-          <td className="border px-4 py-2">1024, 2048, 4096 bits</td>
-        </tr>
-        {/* Add more rows as needed */}
-      </tbody>
-    </table>
-  </div>
-);
+// Register Chart.js components
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
+
+const MetricComparisonTable = () => {
+  const chartData = {
+    labels: ["Encryption Time", "Key Size Options"],
+    datasets: [
+      {
+        label: "AES",
+        data: [90, 3], // 90 = faster, 3 key sizes (128, 192, 256)
+        backgroundColor: "rgba(54, 162, 235, 0.6)",
+      },
+      {
+        label: "RSA",
+        data: [60, 3], // 60 = slower, 3 key sizes (1024, 2048, 4096)
+        backgroundColor: "rgba(75, 192, 192, 0.6)",
+      },
+    ],
+  };
+
+  const options = {
+    responsive: true,
+    maintainAspectRatio: false, // Allow custom height
+    plugins: {
+      legend: {
+        position: "top",
+      },
+      title: {
+        display: true,
+        text: "Performance Comparison of AES and RSA",
+      },
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        ticks: {
+          font: {
+            size: 12, // Smaller font for ticks
+          },
+        },
+      },
+      x: {
+        ticks: {
+          font: {
+            size: 12, // Smaller font for labels
+          },
+        },
+      },
+    },
+  };
+
+  return (
+    <div className="mt-5">
+      <SectionHeader title="Performance Metrics" />
+      <div className="bg-white p-4 rounded-lg shadow-lg max-w-4xl mx-auto">
+        {/* Fixed height and responsive wrapper */}
+        <div className="relative h-64 w-full">
+          <Bar data={chartData} options={options} />
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default MetricComparisonTable;

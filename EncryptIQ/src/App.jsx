@@ -7,6 +7,7 @@ import Aes from "./pages/Aes";
 import Rsa from "./pages/Rsa";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Test from "./pages/Test"
 
 
 function App() {
@@ -22,9 +23,9 @@ function App() {
             <Route path="/aes" element={<Aes/>} />
             <Route path="/rsa" element={<Rsa/>} />
             <Route path="/team" element={<Team />} />
+            <Route path="/test" element={<Test />} />
           </Routes>
         </div>
-
         <Footer/>
       </div>
     </>

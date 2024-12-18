@@ -15,10 +15,12 @@ const Header = () => {
             className="mr-3 h-6 sm:h-9"
             alt="Flowbite React Logo"
           />
-          <h2 className="text-lg font-bold">
-            <span className="text-blue-400">Elcrypt</span>
-            <span className="text-green-400">IQ</span>
-          </h2>
+          <Link to="/">
+            <h2 className="text-lg font-bold">
+              <span className="text-blue-400">Elcrypt</span>
+              <span className="text-green-400">IQ</span>
+            </h2>
+          </Link>
         </Navbar.Brand>
         <div className="flex md:order-2">
           <Button>

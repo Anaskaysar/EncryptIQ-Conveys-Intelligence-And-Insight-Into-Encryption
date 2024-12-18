@@ -1,7 +1,7 @@
 import { useState } from "react";
 import rsa from "js-crypto-rsa";
 
-const Rsa = () => {
+const Test = () => {
   const [plainText, setPlainText] = useState("");
   const [encryptedText, setEncryptedText] = useState("");
   const [decryptedText, setDecryptedText] = useState("");
@@ -178,4 +178,4 @@ const Rsa = () => {
   );
 };
 
-export default Rsa;
+export default Test;
