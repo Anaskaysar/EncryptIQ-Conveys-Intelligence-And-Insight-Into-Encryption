@@ -20,14 +20,14 @@
       "personalSite": "https://member2.com"
     },
     {
-      "name": "Mahadee Zaman",
-      "studentId": "ID: 1002",
+      "name": "Mahedee Zaman",
+      "studentId": "ID: 0442832",
       "role": "Master's Student, Computational Science",
-      "bio": "Focused on machine learning and algorithm optimization.",
-      "image": "path/to/member2.jpg",
-      "linkedin": "https://www.linkedin.com/in/member2",
-      "github": "https://github.com/member2",
-      "personalSite": "https://member2.com"
+      "bio": "GTA at Laurentian University | ex Senior Software Engineer - Samsung R&D Institute",
+      "image": "/images/Mahedee.png",
+      "linkedin": "https://www.linkedin.com/in/mahedee-zaman",
+      "github": "https://github.com/mahedeezaman",
+      "personalSite": "https://www.linkedin.com/in/mahedee-zaman"
     },
     {
       "name": "Md Shafaet Hasan",
